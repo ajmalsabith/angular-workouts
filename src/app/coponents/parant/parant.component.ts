@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./parant.component.css']
 })
 export class ParantComponent {
-    userhave:boolean=true
+   
+  enterName='ajmal'
+  parent=''
+  transformdata(){
+    this.parent=this.enterName
+  }
+
+  value=''
+  new(values: string){
+    this.value=values
+  }
+
+  maxvalues='rifan new fucker rifan '
+  
 } 

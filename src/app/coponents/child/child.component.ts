@@ -1,4 +1,4 @@
-import { Component,Input,OnInit } from '@angular/core';
+import { Component,EventEmitter,Input,OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,7 +7,18 @@ import { Component,Input,OnInit } from '@angular/core';
 })
 export class ChildComponent  {
 
-  @Input() newval?:boolean
+  @Input() parentdata:string=''
+  @Input() newval:string=''
 
+  newvals='ajmlasalim'
   
+  @Output() public senddata=new EventEmitter<string>()
+
+ngOnInit():void
+{
+  this.senddata.emit(this.newvals)
+}  
+  
+
+
 }

@@ -1,3 +1,22 @@
-<p>parant works!</p>
+<nav class="navbar navbar-dark bg-dark" style="margin-bottom: 150px;">
 
-<app-child [newval]="userhave"></app-child>
+</nav>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4>parent conponent </h4>
+        </div>
+        <div class="card-body">
+            pass data: <input type="text" class="form-control" [(ngModel)]="enterName">
+            <input type="button" value="Send" (click)="transformdata()" class="btn btn-warning">
+            <h1>{{maxvalues}}</h1>
+            name:{{value}}
+            <app-child  (senddata)="new($event)"></app-child>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
