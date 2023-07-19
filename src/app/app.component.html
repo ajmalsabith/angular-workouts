@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>
+    <input class="mt-3" type="number" placeholder="enter name" [(ngModel)]="data">
+    <button class="mb-3 btn btn-warning" (click)="reset()">reset</button>
+    <button class="mb-3 btn btn-success" (click)="submit()">click</button>
+
+    <h2>your value is {{data}}</h2>
+    <h3 *ngFor="let item of values">
+      {{item}}
+    </h3>
+    <h2>date :{{date | date | lowercase}}</h2>
+    <h2>date :{{date | date: 'short'  | uppercase}}</h2>
+    <h2>date :{{date | lowercase}}</h2>
+    <h2>date :{{date}}</h2><hr>
+    <h2>name-length :{{text}}={{text | newpipe}}</h2>
+    <h2>sum :{{val}}</h2>
+    
+  </h1>
+  
+</div>
+
+<!-- <router-outlet></router-outlet> -->
